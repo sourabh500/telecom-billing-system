@@ -1,0 +1,74 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: Sourabh@1
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./mysql-init:/docker-entrypoint-initdb.d
+    networks:
+      - telecom-net
+
+  eureka:
+    image: eureka-image:latest
+    container_name: eureka
+    ports:
+      - "8761:8761"
+    networks:
+      - telecom-net
+    restart: unless-stopped
+
+  api-gateway:
+    image: api-gateway-image:latest
+    container_name: api-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - eureka
+    networks:
+      - telecom-net
+    restart: unless-stopped
+
+  telecom-customer-service:
+    image: telecom-customer-service-image:latest
+    container_name: telecom-customer-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mysql
+      - eureka
+    networks:
+      - telecom-net
+    restart: unless-stopped
+
+  plan-service:
+    image: plan-service-image:latest
+    container_name: plan-service
+    ports:
+      - "8084:8084"
+    depends_on:
+      - mysql
+      - eureka
+    networks:
+      - telecom-net
+    restart: unless-stopped
+
+  billing-service:
+    image: billing-service-image:latest
+    container_name: billing-service
+    ports:
+      - "8085:8085"
+    depends_on:
+      - mysql
+      - eureka
+    networks:
+      - telecom-net
+    restart: unless-stopped
+
+networks:
+  telecom-net:
+    driver: bridge
