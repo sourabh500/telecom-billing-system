@@ -10,8 +10,9 @@ import org.springframework.test.context.ActiveProfiles;
 @SpringBootTest
 class BillingServiceApplicationTests {
 
+	// Mock the mail sender to avoid real dependency during test
 	@MockBean
-	private JavaMailSender javaMailSender;
+	private JavaMailSender mailSender;
 
 	@Test
 	void contextLoads() {
