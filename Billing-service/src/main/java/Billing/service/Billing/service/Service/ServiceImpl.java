@@ -8,7 +8,6 @@ import Billing.service.Billing.service.External.PlanClient;
 import Billing.service.Billing.service.External.customerClient;
 import Billing.service.Billing.service.Repository.BillRepo;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
