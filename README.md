@@ -79,25 +79,21 @@ MySQL DB
   ```http
   GET http://localhost:8080/customer-service/customers/1
   
-📑 Roadmap
+---
 
-Reporting & analytics
+## 📑 Roadmap  
 
-Online payments
+- Reporting & analytics  
+- Online payments  
+- Notifications (Kafka/RabbitMQ)  
+- Cloud deployment with CI/CD  
 
-Notifications (Kafka/RabbitMQ)
+---
 
-Cloud deployment with CI/CD
+## 👨‍💻 Author  
 
-👨‍💻 Author
+**Sourabh**  
+_Backend Developer | Java | Spring Boot | Microservices_
 
-Sourabh
-Backend Developer | Java | Spring Boot | Microservices
-
-- Headings  
-- Bullet points for roadmap  
-- Clickable Eureka link  
-- Code block for API endpoint  
-- Clean author section
    
    
