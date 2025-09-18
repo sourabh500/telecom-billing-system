@@ -70,28 +70,34 @@ MySQL DB
    cd auth-service && mvn spring-boot:run
    cd api-gateway && mvn spring-boot:run
 
-📡 API Access
+---
 
-Eureka Dashboard: http://localhost:8761/
+## 📡 API Access  
 
-Gateway Endpoint Example:
-GET http://localhost:8080/customer-service/customers/1
-
+- **Eureka Dashboard:** [http://localhost:8761/](http://localhost:8761/)  
+- **Gateway Endpoint Example:**  
+  ```http
+  GET http://localhost:8080/customer-service/customers/1
+  
 📑 Roadmap
 
- Reporting & analytics
+Reporting & analytics
 
- Online payments
+Online payments
 
- Notifications (Kafka/RabbitMQ)
+Notifications (Kafka/RabbitMQ)
 
- Cloud deployment with CI/CD
+Cloud deployment with CI/CD
 
- 👨‍💻 Author
+👨‍💻 Author
 
 Sourabh
 Backend Developer | Java | Spring Boot | Microservices
 
-   
+- Headings  
+- Bullet points for roadmap  
+- Clickable Eureka link  
+- Code block for API endpoint  
+- Clean author section
    
    
